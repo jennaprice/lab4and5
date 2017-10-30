@@ -36,10 +36,11 @@ public class Lab5 {
 	 */
 	public static int rollDie1(int side) {
 		float randomValue = (float) Math.random() * 100;
-
+		int roll = 0;
 		// I used mod to get the die side
-		int roll = Math.round(randomValue % side);
-
+		while (roll == 0) {
+			roll = Math.round(randomValue % side);
+		}
 		return roll;
 
 	}
